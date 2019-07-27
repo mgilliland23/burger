@@ -16,18 +16,25 @@ li {
     padding: 20px;
     list-style-type: none;
     margin: 10px 0;
+    border-radius: 5px;
 }
 
 button.burger {
     float: right;
-    background-color: #ED9928;
+    background-color: #EBBA27;
     border-radius: 5px;
     color: #621A19;
     border: solid 1px #621A19;
 }
 
+button.burger:hover {
+    font-weight: bold;
+    box-shadow: 5px 10px;
+}
+
 label {
     color: #621A19;
+    font-weight: bold;
     font-size: 1.25rem;
 }
 
@@ -36,11 +43,18 @@ input#burger {
 }
 
 button#submit {
-    border: solid 1px #726D20;
-    background-color: #ED9928;
+    border: solid 1px #ED9928;
+    background-color: #B33C0D;
+    color: #ED9928;
     border-radius: 5px;
     height: 40px;
     margin-left: 10px;
+}
+
+button#submit:hover {
+    font-weight: bold;
+    background-color: #ED9928;
+    color: #621A19;
 }
 
 hr {
@@ -48,6 +62,6 @@ hr {
 }
 
 .jumbotron {
-    background-color: #726D20;
+    background-color: #B33C0D;
     color: white;
 }
