@@ -24,15 +24,22 @@ router.post("/api/burgers", function (req, res) {
 });
 
 router.put("/api/burgers/:id", function (req, res) {
-    var condition = req.params.id;
+    var burger_id = req.params.id;
+    var devoured_state = req.body.devoured;
 
-    console.log("condition", condition);
 
-    burger.update(
-        {
-            devoured: true
-        },
-        condition,
+    //Change the selected burger's devoured status 
+    if (devoured_state === "false") {
+        devoured_state = 1;
+    }
+    else devoured_state = 0;
+
+    console.log("burger_id", burger_id);
+    console.log("new state from controller", devoured_state);
+
+    burger.updateOne(
+        burger_id,
+        devoured_state,
         function (result) {
             if (result.changedRows === 0) {
                 // If no rows were changed, then the ID must not exist, so 404

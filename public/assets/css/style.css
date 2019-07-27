@@ -1,0 +1,53 @@
+html, body {
+    background-color: #EBBA27 !important;
+    color: white;
+}
+
+ul {
+    padding-inline-start: 0;
+}
+
+h2 {
+    color: #621A19;
+}
+
+li {
+    background-color: #B33C0D;
+    padding: 20px;
+    list-style-type: none;
+    margin: 10px 0;
+}
+
+button.burger {
+    float: right;
+    background-color: #ED9928;
+    border-radius: 5px;
+    color: #621A19;
+    border: solid 1px #621A19;
+}
+
+label {
+    color: #621A19;
+    font-size: 1.25rem;
+}
+
+input#burger {
+    width: 60%;
+}
+
+button#submit {
+    border: solid 1px #726D20;
+    background-color: #ED9928;
+    border-radius: 5px;
+    height: 40px;
+    margin-left: 10px;
+}
+
+hr {
+    color: #726D20;
+}
+
+.jumbotron {
+    background-color: #726D20;
+    color: white;
+}

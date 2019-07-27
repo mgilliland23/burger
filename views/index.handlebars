@@ -1,31 +1,51 @@
-<h2>Burgers that have not been eaten</h2>
+<div class="container">
+    <div class="jumbotron">
+        <h1 class="display-4">Burger Builder</h1>
+        <p class="lead">This is a simple app using Node, Express and MySQL to demonstrate MVC design pattern</p>
+        <hr class="my-4">
+        <p>Create whatever type of burger you would like and then devour it</p>
+        <p>Make it again, or create a new one. </p>
 
-<ul>
-    {{#each burgers}}
-    {{#unless devoured}}
-    {{> burgers/burger-block devoured=false}}
-    {{/unless}}
-    {{/each}}
-</ul>
+    </div>
+    <div class="row justify-content-center">
+        <div class="col-md-10">
+            <hr>
+            <h2 class="text-center">Add a Burger</h2>
+            <form class="create-form">
 
-<h2>Burgers that have been devoured!</h2>
+                <div class="form-group text-center">
+                    <label for="burger">Burger Name:</label>
+                    <input type="text" id="burger" name="name">
+                    <button type="submit" id="submit">Add Burger</button>
+                </div>
+            </form>
+            <hr>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <h2>Burgers that have not been eaten</h2>
 
-<ul>
-    {{#each burgers}}
-    {{#if devoured}}
-    {{> burgers/burger-block devoured=true}}
-    {{/if}}
-    {{/each}}
-</ul>
+            <ul>
+                {{#each burgers}}
+                {{#unless devoured}}
+                {{> burgers/burger-block devoured=false}}
+                {{/unless}}
+                {{/each}}
+            </ul>
+        </div>
+        <div class="col-md-6">
+            <h2>Burgers that have been devoured!</h2>
 
-
-<h2>Add a Burger</h2>
-<form class="create-form">
-
-    <div class="form-group">
-        <label for="burger">Burger Name:</label>
-        <input type="text" id="burger" name="name">
+            <ul>
+                {{#each burgers}}
+                {{#if devoured}}
+                {{> burgers/burger-block devoured=true}}
+                {{/if}}
+                {{/each}}
+            </ul>
+        </div>
     </div>
 
-    <button type="submit">Add Burger</button>
-</form>
+
+</div>
